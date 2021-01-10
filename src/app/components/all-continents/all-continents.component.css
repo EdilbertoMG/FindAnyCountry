@@ -7,3 +7,10 @@
     padding-left: 0px;
     padding-right: 0px;
 }
+.ModalCss{
+    border-left-width: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

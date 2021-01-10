@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FindAnyCountryService } from 'src/app/services/find-any-country.service';
+import { Router, ActivatedRoute} from '@angular/router';
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html'
+  selector: 'app-continents',
+  templateUrl: './continents.component.html'
 })
-export class HomeComponent implements OnInit {
+export class ContinentsComponent implements OnInit {
 
+  region: string = "";
   country:any = [];
   OneCountry:any = [];
 
@@ -18,19 +20,28 @@ export class HomeComponent implements OnInit {
   loading: boolean;
   veryfidata: boolean;
 
-  constructor(private anyCountryService:FindAnyCountryService) { }
+  constructor(private anyCountryService: FindAnyCountryService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.loading = true;
-      this.anyCountryService.getAllCountry()
-          .subscribe((data: any) => {
+      this.activatedRoute.params.subscribe(params => {
+          this.region = params['region'];
+          this.anyCountryService.getOneRegion(this.region)
+            .subscribe((data: any) => {
               this.country = data
               if (this.country.length == 0) {
                   this.veryfidata = true;
                   this.loading = false;
               } else {
+                this.loading = true;
                   this.veryfidata = false;
                   this.loading = false;
+                  this.africa = [];
+                  this.americas = [];
+                  this.asia = [];
+                  this.europe = [];
+                  this.oceania = [];
                   this.country.forEach(element => {
                     if (element.region === "Africa") {
                       this.africa.push(element);
@@ -46,5 +57,7 @@ export class HomeComponent implements OnInit {
                     });
               }
           })
+          this.loading = false;
+      })
   }
 }

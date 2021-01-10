@@ -14,4 +14,12 @@ export class FindAnyCountryService {
   getAllCountry(){
     return this.http.get(`${this.URI}all`)
   }
+
+  getOneCountry(code){
+    return this.http.get(`${this.URI}alpha?codes=${code}`)
+  }
+
+  getOneRegion(region){
+    return this.http.get(`${this.URI}region/${region}`)
+  }
 }
