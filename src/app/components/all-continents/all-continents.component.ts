@@ -38,7 +38,7 @@ export class AllContinentsComponent implements OnInit {
               } else {
                   this.veryfidata2 = false;
                   this.loading2 = false;
-                  modaltitle = `<h5 class="modal-title" id="exampleModalLabel"><strong>${this.OneCountry.name}</strong></h5>`;
+                  modaltitle = `<h5 class="modal-title" id="exampleModalLabel"><strong>${this.OneCountry.name}</strong> <i class="fas fa-star"></i></h5>`;
                   modalBody = `
                             <p><strong>Region:</strong> ${this.OneCountry.region}</p>
                             <p><strong>Populations:</strong> ${this.OneCountry.population}</p>
