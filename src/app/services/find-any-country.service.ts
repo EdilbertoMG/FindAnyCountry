@@ -22,4 +22,8 @@ export class FindAnyCountryService {
   getOneRegion(region){
     return this.http.get(`${this.URI}region/${region}`)
   }
+
+  getByName(name){
+    return this.http.get(`${this.URI}name/${name}`)
+  }
 }

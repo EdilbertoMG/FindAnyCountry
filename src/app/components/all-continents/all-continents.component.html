@@ -1,13 +1,9 @@
-<div *ngIf="veryfidata; else main_content" class="alert alert-warning animated fast fadeIn" role="alert" style="margin-left: 20px;margin-right: 20px;">
+<div *ngIf="veryfidata; else main_content" class="alert alert-warning animated fast fadeIn mt-2" role="alert">
     No results found
 </div>
 <app-loading *ngIf="loading"></app-loading>
 <ng-template #main_content>
-    <div class="col-12 mt-2 animated fast fadeIn" style="padding-left: 0px;">
-        <app-search></app-search>
-    </div>
     <div class="row">
-        <div class="col-md-1"></div>
         <div *ngIf="africa.length != 0" class="col-md-2 animated fast fadeIn">
             <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Africa</h1>
             <div class="list-group">
@@ -38,7 +34,6 @@
                 <a *ngFor="let oce of oceania" (click)="openModal(oce.alpha3Code)" data-toggle="modal" data-target="#exampleModal" class="list-group-item list-group-item-action sinBordes"><img class="img-fluid img-thumbnail" [src]="oce.flag" [alt]="oce.name" width="50px" height="50px"> {{oce.name}}</a>
             </div>
         </div>
-        <div class="col-md-1"></div>
     </div>
 </ng-template>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

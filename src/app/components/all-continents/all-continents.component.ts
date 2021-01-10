@@ -51,7 +51,6 @@ export class AllContinentsComponent implements OnInit {
                   document.getElementById('modal-title').innerHTML = modaltitle;
                   document.getElementById('modalBody').innerHTML = modalBody;
               }         
-              console.log(this.OneCountry);   
           })
   }
 }

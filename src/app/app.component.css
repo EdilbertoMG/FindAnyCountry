@@ -18,3 +18,7 @@
   .masthead{
       background-image: url("../assets/img/banner.png");
   }
+  .principal{
+    margin-left: 50px;
+    margin-right: 50px;
+  }
