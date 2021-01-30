@@ -1,29 +1,23 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" [routerLink]="[ 'home' ]">Show All</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" [routerLink]="[ 'continents/' + 'Africa']">Africa</a>
-        </li>
-        <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" [routerLink]="[ 'continents/' + 'Americas']">America</a>
-        </li>
-        <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" [routerLink]="[ 'continents/' + 'Asia']">Asia</a>
-        </li>
-        <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" [routerLink]="[ 'continents/' + 'Europe']">Europa</a>
-        </li>
-        <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" [routerLink]="[ 'continents/' + 'Oceania']">Oceania</a>
-        </li>
-        <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" [routerLink]="[ 'search/']"><i class="fas fa-search"></i> Search</a>
+<nav class="navbar navbar-expand-lg p-0">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="form-inline my-2 my-lg-0 sombra">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search country" aria-label="Search" style="width: 300px" #searchText>
+      <ul class="navbar-nav mr-auto" >
+        <li class="nav-item dropdown colores">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #656565;">
+            Show All
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" [routerLink]="[ 'home' ]" >Show All</a>
+            <a class="dropdown-item" [routerLink]="[ 'continents/' + 'Africa']">Africa</a>
+            <a class="dropdown-item" [routerLink]="[ 'continents/' + 'Americas']">America</a>
+            <a class="dropdown-item" [routerLink]="[ 'continents/' + 'Asia']">Asia</a>
+            <a class="dropdown-item" [routerLink]="[ 'continents/' + 'Europe']">Europa</a>
+            <a class="dropdown-item" [routerLink]="[ 'continents/' + 'Oceania']">Oceania</a>
+          </div>
         </li>
       </ul>
+    <button class="btn btn-color my-2 my-sm-0" type="button" (click)="searchCountry(searchText.value)"><i class="fas fa-search"></i></button>
     </div>
-  </nav>
+  </div>
+</nav>

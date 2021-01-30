@@ -6,6 +6,10 @@
     border-left-width: 0px;
     padding-left: 0px;
     padding-right: 0px;
+    background-color: #fafafb;
+}
+.sinBordes:hover{
+    background-color: #e4f2f7;
 }
 .ModalCss{
     border-left-width: 10px;
@@ -15,5 +19,9 @@
     margin-bottom: 10px;
 }
 .star{
-    color: yellow;
+    color: #f2c94c;
 }
+.text-color{
+    color: #09295e;
+    font-family: fantasy;
+  }

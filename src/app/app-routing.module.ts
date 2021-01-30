@@ -8,7 +8,7 @@ export const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'continents/:region', component: ContinentsComponent },
     { path: 'favorites', component: FavoritesComponent },
-    { path: 'search', component: SearchComponent },
+    { path: 'search/:country', component: SearchComponent },
     { path: '', pathMatch: 'full', redirectTo: 'home' },
     { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];

@@ -5,31 +5,31 @@
 <ng-template #main_content>
     <div class="row">
         <div *ngIf="africa.length != 0" class="col-md-2 animated fast fadeIn">
-            <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Africa</h1>
+            <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0 text-color">Africa</h1>
             <div class="list-group">
                 <a *ngFor="let afc of africa" (click)="openModal(afc.alpha3Code)" data-toggle="modal" data-target="#exampleModal" class="list-group-item list-group-item-action sinBordes"><img class="img-fluid img-thumbnail" [src]="afc.flag" [alt]="afc.name" width="50px" height="50px"> {{afc.name}} <i class="fas fa-star" [id]="afc.alpha3Code"></i></a>
             </div>
         </div>
         <div *ngIf="americas.length != 0" class="col-md-2 animated fast fadeIn">
-            <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">America</h1>
+            <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0 text-color">America</h1>
             <div class="list-group">
                 <a *ngFor="let ame of americas" (click)="openModal(ame.alpha3Code)" data-toggle="modal" data-target="#exampleModal" class="list-group-item list-group-item-action sinBordes"><img class="img-fluid img-thumbnail" [src]="ame.flag" [alt]="ame.name" width="50px" height="50px"> {{ame.name}} <i class="fas fa-star" [id]="ame.alpha3Code"></i></a>
             </div>
         </div>
         <div *ngIf="asia.length != 0" class="col-md-2 animated fast fadeIn">
-            <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Asia</h1>
+            <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0 text-color">Asia</h1>
             <div class="list-group">
                 <a *ngFor="let asi of asia" (click)="openModal(asi.alpha3Code)" data-toggle="modal" data-target="#exampleModal" class="list-group-item list-group-item-action sinBordes"><img class="img-fluid img-thumbnail" [src]="asi.flag" [alt]="asi.name" width="50px" height="50px"> {{asi.name}} <i class="fas fa-star" [id]="asi.alpha3Code"></i></a>
             </div>
         </div>
         <div *ngIf="europe.length != 0" class="col-md-2 animated fast fadeIn">
-            <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Europa</h1>
+            <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0 text-color">Europa</h1>
             <div class="list-group">
                 <a *ngFor="let eur of europe" (click)="openModal(eur.alpha3Code)" data-toggle="modal" data-target="#exampleModal" class="list-group-item list-group-item-action sinBordes"><img class="img-fluid img-thumbnail" [src]="eur.flag" [alt]="eur.name" width="50px" height="50px"> {{eur.name}} <i class="fas fa-star" [id]="eur.alpha3Code"></i></a>
             </div>
         </div>
         <div *ngIf="oceania.length != 0" class="col-md-2 animated fast fadeIn">
-            <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Oceania</h1>
+            <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0 text-color">Oceania</h1>
             <div class="list-group">
                 <a *ngFor="let oce of oceania" (click)="openModal(oce.alpha3Code)" data-toggle="modal" data-target="#exampleModal" class="list-group-item list-group-item-action sinBordes"><img class="img-fluid img-thumbnail" [src]="oce.flag" [alt]="oce.name" width="50px" height="50px"> {{oce.name}} <i class="fas fa-star" [id]="oce.alpha3Code"></i></a>
             </div>
@@ -39,7 +39,7 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header" style="border-bottom-width: 0px;">
                 <div id="modal-title"></div>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>

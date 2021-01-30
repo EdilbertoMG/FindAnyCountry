@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FindAnyCountryService } from 'src/app/services/find-any-country.service';
+import { Router, ActivatedRoute} from '@angular/router';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html'
@@ -18,16 +19,17 @@ export class SearchComponent implements OnInit {
   veryfidata: boolean;
   nodata: boolean;
 
-  constructor(private anyCountryService: FindAnyCountryService) { }
+  constructor(private anyCountryService: FindAnyCountryService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.veryfidata = true;
-  }
+    this.activatedRoute.params.subscribe(params => {
+      this.country = params['country'];
 
-  buscar(finished: string) {
-    
       this.loading = true;
-      this.anyCountryService.getByName(finished)
+
+      this.anyCountryService.getByName(this.country)
           .subscribe((data: any) => 
           {
             this.country = data;
@@ -65,5 +67,6 @@ export class SearchComponent implements OnInit {
                 this.loading = false;
             }
           )
-        } 
-    }
+  })
+  }
+}

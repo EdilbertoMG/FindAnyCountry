@@ -1,24 +1,30 @@
-.a {
-    fill: none;
-  }
-
-  .b {
-    clip-path: url(#a);
-  }
-
-  .c,
-  .d {
-    fill: #f9f9fc;
-  }
-
-  .d {
-    opacity: 0.5;
-    isolation: isolate;
-  }
-  .masthead{
+/*   .masthead{
+      height: 350px;
       background-image: url("../assets/img/banner.png");
-  }
+  } */
   .principal{
     margin-left: 50px;
     margin-right: 50px;
+  }
+  .text-color{
+    color: #09295e;
+    font-family: fantasy;
+  }
+  .text-color2{
+    color: #21adcf;
+    font-family: fantasy;
+  }
+  .btn-color{
+    color: white;
+    background-color: #21adcf;
+  }
+  form {
+    border: white 1px solid;
+    border-radius: .25rem;
+  }
+  .colores{
+    color: white;
+  }
+  .sombra{
+    box-shadow: 2px 2px 5px #999;
   }
